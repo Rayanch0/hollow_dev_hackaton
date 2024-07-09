@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload Server Side Frontend</title>
+  </head>
+  <body>
+    <h1>Update File Information</h1>
+    <form action="/files/:id" method="POST">
+      <input type="text" name="fileId" placeholder="Enter File ID" />
+      <input type="text" name="fileDescription" placeholder="New Description" />
+      <input type="text" name="newFileName" placeholder="New File Name" />
+      <input type="number" name="newFileSize" placeholder="New File Size" />
+      <button type="submit">Update Information</button>
+    </form>
+
+    <form action="/multiple" method="POST" enctype="multipart/form-data">
+      <input type="file" name="upload"  multiple />
+      <button type="submit">Submit To Server</button>
+    </form>
+
+    
+  </body>
+</html>
